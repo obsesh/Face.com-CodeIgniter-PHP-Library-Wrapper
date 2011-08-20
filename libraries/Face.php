@@ -10,9 +10,9 @@ class Face {
 		$this->_ci->load->config('face', TRUE);
 
 		//get settings from config
-		$this->name     = $this->_ci->config->item('FACE_NAME', 'face');
-		$this->key 			= $this->_ci->config->item('FACE_KEY', 'face');
-		$this->secret  	= $this->_ci->config->item('FACE_SECRET', 'face');
+		$this->name		= $this->_ci->config->item('FACE_NAME', 'face');
+		$this->key		= $this->_ci->config->item('FACE_KEY', 'face');
+		$this->secret	= $this->_ci->config->item('FACE_SECRET', 'face');
 
 		//initialize the client
 		$this->_face = new FaceRestClient($this->key, $this->secret);
